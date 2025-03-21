@@ -2,3 +2,4 @@
 ^\.Rproj\.user$
 ^data-raw$
 ^.*\.pdf
+^.+/Excel, documentation and research papers/.+$

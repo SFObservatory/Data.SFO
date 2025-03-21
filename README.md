@@ -1,17 +1,17 @@
-# Data.2DII
+# Data.SFO
 
 ## Overview
 
-The 2° Investing Initiative (2DII) is an independent, non-profit think tank that coordinates some of the world’s largest research projects on sustainable finance.
+The Sustainable Finance Observatory (SFO) is an independent, non-profit think tank that coordinates some of the world’s largest research projects on sustainable finance.
 Our research retail projects included data collection through surveys, focus groups, campaigns, among others. This package contains the raw data captured in those projects. 
 
 ## Installation
 
 To install the package, first it is neccesary to install the package from Github: 
-remotes::install_github("2DegreesInvesting/Data.2DII")
+remotes::install_github("SFObservatory/Data.SFO")
 
 Then charge the library:
-library(Data.2DII)
+library(Data.SFO)
 
 ## Usage
 
@@ -32,7 +32,7 @@ Once you installed the package, you can upload the raw data calling it, as follo
 |Mystery shopping campaign France 2023 | Mystery_france_2023 | The focus of the this mystery shopping campaign was to assess the compliance with the new MiFID II regulation and broader sustainability motivations in France. (Results in French) | 64 | France | 2023 | 
 |Survey demand France 2024 |Survey_sustainability_france_2024 | The survey assets to understand the retail investors demand for sustainable finance products. It has 5 parts : A. Interest, B. Sustainable investing – General, C. Sustainability goals, D. Sustainability Preferences, E: Sociodemographic profile | 1000 | France | 2024 |
 
-** Open questions on Mystery shopping campaigns were deleted. They will be available upon request on: comms@2degrees-investing.org
+** Open questions on Mystery shopping campaigns were deleted. They will be available upon request on: ana.rivera@sf-observatory.org
 
 ## Documentation
 

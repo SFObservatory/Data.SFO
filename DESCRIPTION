@@ -1,10 +1,10 @@
-Package: Data.2DII
-Title: Data package captured by 2DII
+Package: Data.SFO
+Title: Data package captured by Sustainable Finance Observatory
 Version: 0.0.0.9000
 Authors@R: 
-    person("Ana", "Rivera", , "ana@2degrees-investing.org", role = c("aut", "cre"),
+    person("Ana", "Rivera", , "ana.rivera@sf-observatory.org", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: The package contains the dataset used in 2DII reports.
+Description: The package contains the dataset used in SFO reports.
 License: `use_mit_license()`
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

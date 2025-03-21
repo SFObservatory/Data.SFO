@@ -1,5 +1,7 @@
 ^Data\.2DII\.Rproj$
 ^\.Rproj\.user$
 ^data-raw$
+^data-raw$
 ^.*\.pdf
-^.+/Excel, documentation and research papers/.+$
+^.+research papers.+$
+^Raw_data$

@@ -1,7 +1,7 @@
-^Data\.2DII\.Rproj$
+^Data\.SFO\.Rproj$
 ^\.Rproj\.user$
 ^data-raw$
-^data-raw$
 ^.*\.pdf
+^.*\.xlsx
 ^.+research papers.+$
 ^Raw_data$

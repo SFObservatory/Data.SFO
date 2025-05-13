@@ -1,0 +1,173 @@
+#' Mystery Shopping campaing France 2024
+#'
+#' Campaign done by the University of Kassel and SFO, aim to understand if investment advisors are responsive to private investors’ preferences.
+#'
+#' @format A tibble with 304 rows and 164 variables:
+#' \describe{
+#'   \item{respondent_id}{respondent_id}
+#'   \item{collector_id}{collector_id}
+#'   \item{date_created}{date_created}
+#'   \item{date_modified}{date_modified}
+#'   \item{language}{language}
+#'   \item{q1}{Veuillez cocher la case correspondante à votre numéro d'identification de client mystère.}
+#'   \item{q2}{Cette visite est votre}
+#'   \item{q3}{Veuillez indiquer la banque que vous évaluez :}
+#'   \item{q4}{Veuillez indiquer la date à laquelle vous avez eu le rendez-vous avec le conseiller (format : jj.mm.aaaa.).}
+#'   \item{q5}{Combien de rendez-vous avez-vous eu avant la recommandation du produit ?}
+#'   \item{q6}{Veuillez indiquer l'heure du premier rendez-vous (par exemple 13:45).}
+#'   \item{q7}{Veuillez indiquer l'heure du second rendez-vous s'il y en a eu un (par exemple 13:45).}
+#'   \item{q8}{Veuillez indiquer votre genre}
+#'   \item{q9}{Veuillez indiquer votre âge en années entières. J'ai ______ ans}
+#'   \item{q10}{Comment décririez vous votre votre origine ethnique ?}
+#'   \item{q10_autre}{Column1}
+#'   \item{q11}{Comment décririez vous l'origine ethnique du conseiller qui vous a reçu ?}
+#'   \item{q11_autre}{_1}
+#'   \item{q12_1}{Avez-vous reçu les documents suivants de la part du conseiller financier ? (cochez toutes les options correspondantes)}
+#'   \item{q12_2}{Documents d'Informations Clés pour les produits recommandés (DIC)}
+#'   \item{q12_3}{Notes manuscrites du conseiller}
+#'   \item{q12_4}{Prospectus des fonds}
+#'   \item{q12_5}{Documents marketing}
+#'   \item{q12_6}{Je n'ai reçu aucun document de la part du conseiller, bien que je l'aie demandé (réponse unique, ne pas cochez d'autres cases)}
+#'   \item{q12_7}{Autre (veuillez préciser)}
+#'   \item{q13}{Quel type d'assistance le conseiller a-t-il utilisé pendant l'entretien ?}
+#'   \item{q13_autre}{Autre (veuillez préciser)}
+#'   \item{q14_1}{Veuillez cocher toutes les affirmations qui s'appliquent. (réponses multiples)}
+#'   \item{q14_2}{J'ai dû intervenir au cours de la conversation et persuader activement le conseiller de parler avec moi d'investissements durables.}
+#'   \item{q14_3}{Le conseiller a mal saisi ma préférence en matière de développement durable dans le système de conseil.}
+#'   \item{q14_4}{Le conseiller a mal noté ma préférence en matière de développement durable.}
+#'   \item{q14_5}{Je n'ai pas reçu de recommandation de produit de la part du conseiller, bien que je l'aie activement demandée.}
+#'   \item{q14_6}{Le conseiller m'a offert une réduction sur les produits financiers durables (par exemple une réduction sur les frais)}
+#'   \item{q14_7}{Le conseiller m'a proposé une réduction sur des produits financiers conventionnels (p. ex. une réduction sur les frais)}
+#'   \item{q14_8}{Le conseiller n'a pas voulu me conseiller sur des produits financiers durables}
+#'   \item{q14_9}{Je n'ai pas reçu de déclaration d'adéquation, bien que je l'aie demandée au conseiller.}
+#'   \item{q15}{Quelle préférence en matière de risque avez-vous exprimée lors de la consultation ?}
+#'   \item{q16}{Quel est le montant de l'investissement que vous avez exprimé lors de la consultation ?}
+#'   \item{q17}{Quel niveau de connaissance et d'expérience financières avez-vous exprimés au cours de la consultation ?}
+#'   \item{q18}{Le conseiller a procédé à une évaluation de l'adéquation au cours de la consultation (par exemple en vous posant des questions sur vos préférences en matière de risque, le montant de votre investissement, vos connaissances et expériences financières).}
+#'   \item{q19}{J'ai dû intervenir pour exprimer mes objectifs financiers (préférences en matière de risque, montant de mon investissement, connaissances et expériences) car le conseiller ne m'a pas posé de questions à ce sujet, alors même qu'il a commencé à me recommand}
+#'   \item{q20}{Quelle préférence en matière de développement durable avez-vous exprimée lors de la consultation que vous êtes en train d'évaluer ?}
+#'   \item{q21}{Durée de la consultation du premier rendez-vous (en minutes)}
+#'   \item{q22}{Durée de la consultation du second rendez-vous s'il y en a eu un (en minutes)}
+#'   \item{q23}{De quelle manière s'est déroulée la première séance de conseil ?}
+#'   \item{q24}{De quelle manière s'est déroulée la deuxième séance de conseil s'il y en a eu une ?}
+#'   \item{q25}{Combien de conseillers bancaires ont pris part au rendez-vous ?}
+#'   \item{q26}{Veuillez indiquer le sexe du conseiller #1}
+#'   \item{q27}{Veuillez indiquer le sexe du conseiller #2 si applicable}
+#'   \item{q28}{Veuillez indiquer depuis combien de temps le premier conseiller fourni des conseils en investissement (en années).}
+#'   \item{q29}{Veuillez indiquer depuis combien de temps le second conseiller fourni des conseils en investissement (en années).}
+#'   \item{q30_1}{Veuillez indiquer les aspects de la consultation sur lesquels vous avez dû intervenir parce que le consultant ne vous a pas posé de questions ou remis le document de sa propre initiative (veuillez cocher toutes les options applicables !).}
+#'   \item{q30_2}{Documents d'information clés pour les produits recommandés (DIC)}
+#'   \item{q30_3}{Vos préférences en matière de risque}
+#'   \item{q30_4}{Le montant de votre investissement}
+#'   \item{q30_5}{Vos préférences en matière de durabilité}
+#'   \item{q30_6}{Votre expérience et vos connaissances financières}
+#'   \item{q30_7}{Je ne suis pas intervenu lors du rendez-vous (réponse unique, ne pas cochez d'autres cases)}
+#'   \item{q30_8}{Autre (veuillez préciser)}
+#'   \item{q31}{Avez-vous eu l'impression que le conseiller vous a pris au sérieux pendant la consultation ?}
+#'   \item{q32}{Le conseiller ne connaissait pas mes besoins.}
+#'   \item{q33}{J'ai l'impression que le conseiller n'a pas agit pas dans mon intérêt.}
+#'   \item{q34}{Le conseiller a choisi des mots clairs et compréhensibles pour moi.}
+#'   \item{q35}{Je fais confiance au conseiller.}
+#'   \item{q36}{Je me sens en sécurité dans mes transactions avec le conseiller.}
+#'   \item{q37}{Le conseiller a été poli.}
+#'   \item{q38}{Si le conseiller promet de faire quelque chose à une certaine date, il l'a fait.}
+#'   \item{q39}{Le conseiller est fiable.}
+#'   \item{q40}{Le conseiller fournit des conseils à la date initialement convenue.}
+#'   \item{q41}{J'ai l'impression que le conseiller a bien respecté la procédure de la consultation.}
+#'   \item{q42}{Le conseiller a mené la consultation avec courtoisie.}
+#'   \item{q43}{Le conseiller m'a fait attendre}
+#'   \item{q44}{Le conseiller n'a pas pu m'aider dans ma demande.}
+#'   \item{q45}{La séance de conseil n'a pas pris assez de temps (temps perçu)}
+#'   \item{q46}{Le conseiller dispose d'un équipement moderne.}
+#'   \item{q47}{Le conseiller est bien habillé et donne une bonne impression.}
+#'   \item{q48}{L'apparence des installations de l'agence visitée est appropriée pour une banque.}
+#'   \item{q49}{La salle où s'est déroulé l'entretien est agréable et propre.}
+#'   \item{q50}{Le conseiller m'a fait une impression positive lorsqu'il m'a conseillé sur les investissements durables.}
+#'   \item{q51}{Le conseiller m'a fait une impression positive lorsqu'il m'a donné des conseils généraux (c'est-à-dire sans rapport avec le développement durable).}
+#'   \item{q52}{Le conseiller a maintenu un contact visuel avec moi pendant l'entretien.}
+#'   \item{q53}{Le conseiller a été aimable.}
+#'   \item{q54}{Le conseiller s'est impliqué pendant la séance de conseil}
+#'   \item{q55}{Le conseiller m'a encouragé à prendre une décision d'investissement.}
+#'   \item{q56}{Le conseiller a fait pression sur moi pour que je prenne une décision d'investissement.}
+#'   \item{q57}{Le conseiller a su bien présenter les produits recommandés.}
+#'   \item{q58}{Le conseiller m'a fait une impression professionnelle.}
+#'   \item{q59}{Veuillez évaluer la qualité des conseils du conseiller dans le domaine du développement durable.}
+#'   \item{q60}{Préparation / Formation du conseiller dans le domaine des investissements durables.}
+#'   \item{q61}{Connaissance des documents d'information sur le développement durable.}
+#'   \item{q62}{Connaissance qu'a le conseiller des services et produits de la banque.}
+#'   \item{q63}{Volonté du conseiller de vous fournir les informations que vous avez demandées.}
+#'   \item{q64}{Connaissance du conseiller dans le domaine des investissements durables uniquement.}
+#'   \item{q65}{Manière dont le conseiller a répondu à vos questions relatives aux produits.}
+#'   \item{q66}{Manière dont vous avez perçu dans sa globalité les connaissances du conseiller (c'est-à-dire non exclusivement liées au développement durable).}
+#'   \item{q67}{Connaissance du conseiller sur le(s) produit(s) durable(s) recommandé(s).}
+#'   \item{q68}{Qualité de services de conseil du conseiller dans le domaine du développement durable uniquement.}
+#'   \item{q69}{Qualité de services de conseil du conseiller à l'exception du domaine du développement durable.}
+#'   \item{q70}{Qualité globale des conseils du conseiller.}
+#'   \item{q71}{Inclusion des informations relatives à l'investisseur dans les questions qu'il vous a posées (objectif d'investissement, attitude à l'égard du risque, horizon d'investissement, revenus et situation patrimoniale).}
+#'   \item{q72}{Explications ou commentaires du conseiller concernant la fiche d'information clé du produit.}
+#'   \item{q73}{Explications ou remarques du conseiller concernant la déclaration d'adéquation.}
+#'   \item{q74}{Pour chaque affirmation, veuillez indiquer dans quelle mesure vous êtes d'accord.Le conseiller m'a informé sur les différents types de comptes et d'investissements.}
+#'   \item{q75}{J'ai eu l'impression que le conseiller voulait m'encourager aux investissements durables.}
+#'   \item{q76}{Le conseiller en investissement semblait motivé lorsqu'il a commencé à aborder les investissements durables.}
+#'   \item{q77}{La banque visitée fait une publicité très visible sur le thème du développement durable sur son site Internet de l'entreprise.}
+#'   \item{q78}{Le thème du développement durable fait l'objet d'une publicité très visible dans l'agence bancaire visitée (par exemple, dépliants, présentoirs, etc.).}
+#'   \item{q79}{Avant même de visiter la banque, j'avais déjà vu de la publicité sur les investissements durables de cette banque (télévision, affiches, radio, publicités podcast).}
+#'   \item{q80}{Dans quelle mesure le conseiller en investissement peut-il expliquer les différences entre les trois normes de durabilité ? (Taxonomie de l'UE, SFDR et PAI)}
+#'   \item{q81}{Veuillez évaluer la manière dont il vous a demandé vos préférences en matière de durabilité lors de votre entretien.}
+#'   \item{q82}{Le conseiller en investissement a pu apaiser mes craintes concernant l'écoblanchiment.}
+#'   \item{q83}{Le conseiller a pu dissiper mon hypothèse selon laquelle les investissements durables sont associés à des frais plus élevés que les investissements conventionnels.}
+#'   \item{q84}{Le conseiller a pu réfuter mon hypothèse selon laquelle les investissements durables génèrent des rendements inférieurs à ceux des investissements conventionnels.}
+#'   \item{q85}{Le conseiller a pu réfuter mon hypothèse selon laquelle les investissements durables sont plus risqués que les investissements conventionnels.}
+#'   \item{q86}{Le conseiller a semblé connaître les documents d'information relatifs aux produits dans le domaine du développement durable.}
+#'   \item{q87}{Le conseiller m'a expliqué de manière compréhensible le contenu du (des) produit(s) durable(s) proposé(s).}
+#'   \item{q88}{Le conseiller en investissement a été en mesure d'expliquer l'impact généré par le produit recommandé.}
+#'   \item{q89}{Le conseiller a essayé de m'influencer.}
+#'   \item{q90}{L'enquête sur ma préférence en matière de durabilité était compréhensible pour moi.}
+#'   \item{q91}{La manière dont on m'a interrogé sur ma préférence en matière de développement durable m'a laissé une impression complexe.}
+#'   \item{q92}{Je n'ai pas pu suivre le conseiller lorsqu'il m'a interrogé sur ma préférence en matière de durabilité et j'étais confus.}
+#'   \item{q93}{J'ai eu l'impression que le conseiller voulait m'influencer lorsqu'il m'a interrogé sur mes préférences en matière de développement durable.}
+#'   \item{q94}{Le conseiller m'a poussé vers la catégorie "investissement écologiquement durable" (taxonomie de l'UE) lorsqu'il m'a interrogé sur mes préférences en matière de durabilité.}
+#'   \item{q95}{Le conseiller m'a poussé dans la catégorie "Investissement durablement" (SFDR) lorsqu'il m'a demandé ma préférence en matière de durabilité.}
+#'   \item{q96}{Le conseiller m'a fait entrer dans la catégorie "Principaux impacts négatifs" (PAI) lorsqu'il m'a demandé ma préférence en matière de durabilité.}
+#'   \item{q97}{Le conseiller m'a poussé à indiquer "aucune préférence" lorsqu'il m'a demandé ma préférence en matière de durabilité.}
+#'   \item{q98}{Les documents explicatifs que le conseiller m'a fournis sur les investissements durables m'ont été utiles.}
+#'   \item{q99}{Le conseiller m'a expliqué le concept d'investissement durable de manière compréhensible.}
+#'   \item{q100}{Le conseiller m'a expliqué de manière compréhensible le concept d'investissement écologiquement durable (taxonomie de l'UE).}
+#'   \item{q101}{Le conseiller m'a expliqué le concept d'investissement durable (SFDR) de manière compréhensible.}
+#'   \item{q102}{Le conseiller m'a expliqué de manière compréhensible le concept des "Principaux Impacts Négatifs" (Principles Adverse Impacts, PAI).}
+#'   \item{q103}{Le conseiller en investissement a été en mesure de m'expliquer l'impact des investissements durables}
+#'   \item{q104}{Je me suis senti bien conseillé dans le domaine des "investissements écologiquement durables" (taxonomie de l'UE).}
+#'   \item{q105}{Je me suis senti bien conseillé dans le domaine de l'"investissement durable" (SFDR).}
+#'   \item{q106}{Je me suis senti bien conseillé dans le domaine des "Principaux impacts négatifs" (PAI).}
+#'   \item{q107}{Le conseiller en investissement m'a encouragé à investir de manière durable et m'a donné le sentiment de faire quelque chose de bien.}
+#'   \item{q108}{Veuillez indiquer votre degré de satisfaction à l'égard des services de conseil du conseiller.}
+#'   \item{q109}{Quel est votre degré de satisfaction générale à l'égard des services de conseil du conseiller ?}
+#'   \item{q110}{Dans quelle mesure êtes-vous satisfait des services de conseil du conseiller dans le domaine des investissements durables ?}
+#'   \item{q111}{Le conseiller a un niveau de connaissances élevé.}
+#'   \item{q112}{Le conseiller m'a fourni des informations complètes.}
+#'   \item{q113}{Le conseiller m'a fourni beaucoup d'informations.}
+#'   \item{q114}{Les explications du conseiller étaient structurées.}
+#'   \item{q115}{Le conseiller a répondu aux besoins individuels.}
+#'   \item{q116}{Le conseiller était bien informé.}
+#'   \item{q117}{Je recommanderais un conseiller de la banque évaluée.}
+#'   \item{q118}{Je pourrais de nouveau faire appel à un conseiller de cette banque si j'en avais l'occasion.}
+#'   \item{q119}{Si la banque n'est pas disponible dans la zone que je visite (par exemple, pas de rendez-vous disponibles, pas encore ouverte), je serais prêt à accepter un rendez-vous dans une autre agence de la même banque dans le voisinage, dans un rayon de 20 kilomètres.}
+#'   \item{q120}{Après avoir reçu des conseils, j'investirai effectivement dans un ou plusieurs des produits durables recommandés}
+#'   \item{q121}{J'ai l'intention d'investir de manière durable après les conseils donnés par le conseiller, mais pas dans l'un des produits durables recommandés.}
+#'   \item{q122}{Je suis satisfait de ma décision de me rendre dans cette banque.}
+#'   \item{q123}{Ma décision de demander conseil à cette banque était judicieuse.}
+#'   \item{q124}{Je pense que j'ai bien fait de demander conseil à cette banque.}
+#'   \item{q125}{Je pense que mon expérience avec cette banque a été agréable.}
+#'   \item{q126}{Le conseiller m'a montré pourquoi le(s) produit(s) durable(s) recommandé(s) me convenait(ent).}
+#'   \item{q127}{Les différentes recommandations de produits du conseiller m'ont semblé appropriées.}
+#'   \item{q128}{Le conseiller m'a expliqué de manière compréhensible les avantages et les inconvénients des produits recommandés.}
+#'   \item{q129}{Le conseiller en investissement n'a pas été en mesure de me recommander un produit en fonction de ma préférence pour le développement durable.}
+#'   \item{q130}{Ma préférence en matière de développement durable a été prise en compte dans la recommandation du produit.}
+#'   \item{q131}{La connaissance des différents produits par le conseiller me donne un bon sentiment.}
+#'   \item{q132}{Le conseiller m'a fourni des informations adéquates sur les produits.}
+#'   \item{q133}{Le conseiller connaît bien l'équipement de la banque (par exemple le système informatique).}
+#'   \item{q134}{Lors de la consultation, le conseiller m'a assuré que les produits qu'il recommandait ont un impact dans le monde réel.}
+#'   \item{q135}{Seriez-vous prêt à suivre le conseil et à investir dans les produits recommandés ?}
+#' }
+#' @source \url{https://www.pnas.org/content/114/7/1512/tab-figures-data}
+"Mystery_France_2024"

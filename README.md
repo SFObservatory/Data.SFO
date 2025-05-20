@@ -31,7 +31,7 @@ Once you installed the package, you can upload the raw data calling it, as follo
 |Survey sustainability preferences 2023 | Survey_sustainability_2023 | The survey assets to understand the retail investors demand for sustainable finance products. It has 5 parts : A. Interest, B. Sustainable investing – General, C. Sustainability goals, D. Sustainability Preferences, E: Sociodemographic profile | ~2100 | Germany, Italy and The Netherlands. | 2023 |
 |Mystery shopping campaign France 2023 | Mystery_france_2023 | The focus of the this mystery shopping campaign was to assess the compliance with the new MiFID II regulation and broader sustainability motivations in France. (Results in French) | 64 | France | 2023 | 
 |Survey demand France 2024 |Survey_sustainability_france_2024 | The survey assets to understand the retail investors demand for sustainable finance products. It has 5 parts : A. Interest, B. Sustainable investing – General, C. Sustainability goals, D. Sustainability Preferences, E: Sociodemographic profile | 1000 | France | 2024 |
-|Mystery shopping campaign France 2024 |Mystery_France_2024 | Campaigne done by the University of Kassel and SFO, aim to understand if investment advisors are responsive to the sustainable preferences of private investors. | ~300 | France | 2024 |
+|Mystery shopping campaign France 2024 |Mystery_France_2024 | This campaign was developed in partnership with the University of Kassel. It has 4 profiles: - EU Taxonomy, Sustainable investment, PAI, No sustainability preference. Investment amounts and risk preferences changed across visits| ~304 | France | 2024 |
 
 
 ** Open questions on Mystery shopping campaigns were deleted. They will be available upon request on: ana.rivera@sf-observatory.org

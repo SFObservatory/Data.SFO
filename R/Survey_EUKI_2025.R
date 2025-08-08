@@ -1,0 +1,185 @@
+#' Survey EUKI 2025
+#'
+#' The survey assets to understand the retail investors demand for sustainable finance products.Available in 3 countries: Romania, Bulgaria and Estonia.
+#'
+#' @format A tibble with 3001 rows and 166 variables:
+#' \describe{
+#'   \item{record}{ Record number}
+#'   \item{uuid}{ Participant identifier}
+#'   \item{date}{ Completion time and date}
+#'   \item{qtime}{ Total Interview Time}
+#'   \item{status}{ Participant status}
+#'   \item{SD0}{ Hidden for the country.}
+#'   \item{SD1}{ Gender}
+#'   \item{SD2}{ Age}
+#'   \item{demog_age_recode}{}
+#'   \item{SD3_BG}{ In which region do you live?}
+#'   \item{SD3_EE}{ In which region do you live?}
+#'   \item{SD3_RO}{ In which region do you live?}
+#'   \item{Hidden_BG}{ HIDDEN BASED ON}
+#'   \item{Hidden_EE}{ In which region do you live?}
+#'   \item{Hidden_RO}{ In which region do you live?}
+#'   \item{A1}{ Which of the following statements applies to you with regard to financial decisions (e.g., investing money)?}
+#'   \item{A2}{ What are your financial goals, in other words, what do you want to achieve with your money?}
+#'   \item{A2r1}{Generate a precautionary buffer to be used in case of problem}
+#'   \item{A2r2}{Save for retirement}
+#'   \item{A2r3}{Generate a long-term increase in wealth}
+#'   \item{A2r4}{Generate additional income}
+#'   \item{A2r5}{Save money for personal projects}
+#'   \item{A2r6}{Save money for children or relatives}
+#'   \item{A2r7}{Generate a positive environmental and/or social impact}
+#'   \item{A2r8}{Other financial goals}
+#'   \item{A2r8oe}{ What are your financial goals, in other words, what do you want to achieve with your money? - Other financial goals}
+#'   \item{A3}{ Which of the following information channels do you use before investing money?}
+#'   \item{A3r1}{Advice from bank advisor}
+#'   \item{A3r2}{Advice from an external financial advisor}
+#'   \item{A3r3}{Advice from the consumer association}
+#'   \item{A3r4}{Online broker}
+#'   \item{A3r5}{Exchange with family, friends and acquaintances}
+#'   \item{A3r6}{Financial magazine}
+#'   \item{A3r7}{Other magazines}
+#'   \item{A3r8}{News or newspapers}
+#'   \item{A3r9}{Internet pages of the companies}
+#'   \item{A3r10}{Annual reports (annual financial statements, management report, etc.)}
+#'   \item{A3r11}{Online forums and blogs}
+#'   \item{A3r12}{Social media}
+#'   \item{A3r13}{Podcasts}
+#'   \item{A3r14}{Other information channels}
+#'   \item{A3r15}{I do not use any information channel}
+#'   \item{A3r14oe}{ Which of the following information channels do you use before investing money? - Other information channels}
+#'   \item{A4}{ Suppose you had $100 in a savings account and the interest rate was 2% per year. After 5 years, how much do you think you would have in the account if you left the money to grow?}
+#'   \item{A5}{ Imagine that the interest rate on your savings account was 1% per year and inflation was 2% per year. After 1 year, how much would you be able to buy with the money in this account?}
+#'   \item{A6}{ Buying a single company's stock usually provides a safer return than a stock mutual fund.}
+#'   \item{A7}{ How willing or unwilling are you to take risks when making decisions in your life?}
+#'   \item{A9}{ How well do the following statements describe your personality? I see myself as someone who …}
+#'   \item{A9r1}{…is reserved}
+#'   \item{A9r2}{…is generally trusting}
+#'   \item{A9r3}{...tends to be lazy}
+#'   \item{A9r4}{…is relaxed, handles stress well}
+#'   \item{A9r5}{…has few artistic interests}
+#'   \item{A9r6}{…is outgoing, sociable}
+#'   \item{A9r7}{…tends to find fault with others}
+#'   \item{A9r8}{…does a thorough job}
+#'   \item{A9r9}{…gets nervous easily}
+#'   \item{A9r10}{…has an active imagination}
+#'   \item{A10}{ How well do the following statements describe your personality? I think…}
+#'   \item{A10r1}{… that using more natural resources than we need does not threaten the health and well-being of people in the future}
+#'   \item{A10r2}{… that we need stricter laws and regulations to protect the environment}
+#'   \item{A10r3}{… that it is important to take measures against problems which have to do with climate change}
+#'   \item{A10r4}{… that everyone ought to be given the opportunity to acquire the knowledge, values and skills that are necessary to live sustainably}
+#'   \item{A10r5}{… that we who are living now should make sure that people in the future enjoy the same quality of life as we do today}
+#'   \item{A10r6}{… that women and men throughout the world must be given the same opportunities for education and employment}
+#'   \item{A10r7}{… that companies have a responsibility to reduce the use of packaging and disposable articles}
+#'   \item{A10r8}{… it is important to reduce poverty}
+#'   \item{A10r9}{… that companies in rich countries should give employees in poor nations the same conditions as in rich countries}
+#'   \item{B1}{ Have you ever heard of sustainable finance products or sustainable investing?}
+#'   \item{B2}{ Do you currently own sustainable investments/sustainable finance products?}
+#'   \item{B3}{ Do you plan to invest (additional) money in sustainable investments/sustainable finance products within the next three years?}
+#'   \item{B4a}{ What is the current share of sustainable investments in the total of all your investments?}
+#'   \item{B4b}{ You have previously answered that you already own sustainable investments. We would now like to learn more about the sustainable financial products you have invested in. Could you say what proportion (in %) of your total financial savings is currently invested in sustainable investments}
+#'   \item{B4br1}{Savings account}
+#'   \item{B4br2}{Money market account}
+#'   \item{B4br3}{Shares}
+#'   \item{B4br4}{Equity funds (incl. ETFs and index funds)}
+#'   \item{B4br5}{Bonds}
+#'   \item{B4br6}{Bond funds}
+#'   \item{B4br7}{Private equity or debt funds}
+#'   \item{B4br8}{Crowdfunding}
+#'   \item{B4br9}{Cooperative shares}
+#'   \item{B4br10}{Other fixed-income securities (e.g. mortgage bonds, government bonds, savings contracts, time deposits, subordinated loans)}
+#'   \item{B4br11}{Other non-fixed-income securities (e.g. warrants, open-end real estate funds, closed-end funds, mixed funds)}
+#'   \item{HiddenxB_5}{ Hidden for B_5 Piping}
+#'   \item{B5}{}
+#'   \item{B5r1}{My financial advisor did not propose me the right products.}
+#'   \item{B5r2}{I have found no time to understand and evaluate products related to sustainability, so I stick to a conventional asset allocation.}
+#'   \item{B5r3}{I feel poorly informed about sustainable investments.}
+#'   \item{B5r4}{I do not trust that providers of sustainable investments follow the sustainability guidelines that they represent in their investment information.}
+#'   \item{B5r5}{I would like to invest in sustainable investments but I'm afraid that changing my asset allocation would increase the risk of my portfolio or decrease its return.}
+#'   \item{B5r6}{It takes too much time to inform myself about sustainable investments and the underlying criteria.}
+#'   \item{B5r7}{I don't believe that sustainable investments generate a real world impact.}
+#'   \item{B5r8}{I'm motivated to be a sustainable investor but my sustainability preferences are not super clear to me.}
+#'   \item{B5r9}{I do not feel sufficiently advised about sustainable investments.}
+#'   \item{B5r10}{The available market offering of sustainable investments is insufficient.}
+#'   \item{B5r11}{Negative experiences or financial losses with sustainable investments.}
+#'   \item{B5r12}{Other reasons.}
+#'   \item{B5r13}{Prefer not to say.}
+#'   \item{B5r12oe}{}
+#'   \item{B6}{ In the context of sustainable financial investments, the acronym "ESG" is often used. What do you think the abbreviation "ESG" stands for?}
+#'   \item{B7}{ Does a product advertised in the European Union as a "sustainable financial product" have to meet uniform criteria, set by the state regulatory authorities?}
+#'   \item{B8}{ Are you aware of a label (or certificate, or proof) that certifies a sustainable financial product (from governmental or non-governmental organizations)?}
+#'   \item{B9}{ Let's say a company has a low environmental footprint but has poor social and employee practices. Would it be possible to call the shares of this company a "sustainable" financial product in the financial markets?}
+#'   \item{B10}{ In how many of the 3 ESG components (Environment, Social, Governance) does a company have to be sustainable in order to be considered a sustainable company on the financial markets?}
+#'   \item{B11}{ An investment in a sustainable fund that includes companies with a low CO2 footprint directly reduces global CO2 emissions.}
+#'   \item{B12}{ Do financial institutions that offer sustainable products always proactively influence the sustainability behavior of the invested companies (e.g., by participating in the annual shareholders' meeting)?}
+#'   \item{B13}{ Is there a difference for you between “sustainable investing” and “impact investing?”}
+#'   \item{B14}{ Which of the following labels or certificates characterizes a financial product as sustainable in terms of environmental, social and governance criteria (ESG criteria)?}
+#'   \item{B15}{ How does an investment in a sustainable equity fund that focuses specifically on companies with a low carbon footprint contribute to the reduction of global CO2 emissions?}
+#'   \item{B16}{ What is “greenwashing" in the context of sustainable investments?}
+#'   \item{B17}{ What is an "exclusion strategy" when investing sustainably?}
+#'   \item{B18}{ Which statement best describes a "best-in-class" investment strategy?}
+#'   \item{B19}{ Please indicate your assessment of the average risk level of sustainable investments compared to conventional investments.}
+#'   \item{B20}{ Please indicate your assessment of the average level of interest rates or returns of sustainable investments compared to conventional investments.}
+#'   \item{B21}{ Please indicate your assessment of the average level of fees of sustainable investments compared to conventional investments.}
+#'   \item{B22}{ Please indicate how strongly you intend to learn about sustainable investing and sustainable financial products.}
+#'   \item{B23}{ Which of the following channels would you prefer to use to learn more about sustainable investments and sustainable investing?}
+#'   \item{B23r1}{Advice from banks and/or independent financial advisors}
+#'   \item{B23r2}{Advice from consumer advice centers}
+#'   \item{B23r3}{Online brokers}
+#'   \item{B23r4}{Exchange with family, friends, and acquaintances}
+#'   \item{B23r5}{Economic or finance magazines (e.g., The Wall Street Journal, Barron's, Financial Times, etc.)}
+#'   \item{B23r6}{News or daily newspapers}
+#'   \item{B23r7}{Websites of the companies in which investments are made}
+#'   \item{B23r8}{Websites of the investment providers}
+#'   \item{B23r9}{Annual reports of the companies in which investments are made (annual financial statements, management report, etc.)}
+#'   \item{B23r10}{Online forums and blogs}
+#'   \item{B23r11}{Social media (e.g., Facebook, Instagram, TikTok, Twitter/X, YouTube, etc.)}
+#'   \item{B23r12}{Podcasts}
+#'   \item{B23r13}{Financial portals (e.g., Yahoo Finance, MarketWatch, Investopedia, etc.)}
+#'   \item{B23r14}{Sales documents relating to the investment product (e.g., basic information sheets, sales prospectus, etc.)}
+#'   \item{B23r15}{Online courses and webinars on sustainable investing}
+#'   \item{B23r16}{Educational materials from platforms (like Coursera, Udemy, edX)}
+#'   \item{B23r17}{Books or e-books about sustainable investing}
+#'   \item{B23r18}{Investor meetups or events (virtual or in-person)}
+#'   \item{B23r19}{Email newsletters from financial experts or sustainability influencers}
+#'   \item{B23r20}{School curriculum}
+#'   \item{B23r21}{Other information channels}
+#'   \item{B23r22}{I would not use any information channel}
+#'   \item{B23r23}{Do not know}
+#'   \item{B23r21oe}{ Which of the following channels would you prefer to use to learn more about sustainable investments and sustainable investing? - Other information channels}
+#'   \item{C1}{ Please rate the following statement.}
+#'   \item{C1r1}{I believe that financial investments are an appropriate way to express one's values.}
+#'   \item{C1r2}{I believe that financial investments in general are effective to change the world.}
+#'   \item{C1r3}{I believe that my own financial investments, whatever their actual amount, can make a difference.}
+#'   \item{Hidden_Video}{ HIDDEN to show video according to country.}
+#'   \item{Sustainability_objectivesXVideo}{ Please watch the video below. It will help you answer the questions to come!}
+#'   \item{Sustainability_objectivesXVideoplay_count}{Play Count}
+#'   \item{Sustainability_objectivesXVideotime_elapsed}{Elapsed Time}
+#'   \item{Vid_TIME4r1}{ VAR_TIME}
+#'   \item{D1}{ At the beginning of the survey, we asked you about your financial goals.}
+#'   \item{D1r1}{I want my money to be invested in a way that contributes to change in the real economy.}
+#'   \item{D1r2}{I want my money to be invested in such a way that the companies I invest are in align with my personal values.}
+#'   \item{D1r3}{I want my money to be invested in such a way that my savings achieve the maximum possible return for the level of risk I accept to take.}
+#'   \item{D2}{ Please rank the following financial and non-financial goals in terms of their personal importance to you (1 = highest importance).}
+#'   \item{D2r1}{Alignment of my savings with my personal values}
+#'   \item{D2r2}{Achieve a clear positive impact on the society or the environment}
+#'   \item{D2r3}{Achieve the maximum possible return for the level of risk I am willing to accept}
+#'   \item{D3_1}{ Which non-financial goals could private investors pursue when investing money?}
+#'   \item{D3_1r1}{Maximizing returns}
+#'   \item{D3_1r2}{Positive impact on the invested companies}
+#'   \item{D3_1r3}{Value alignment}
+#'   \item{D3_1r4}{Risk reduction}
+#'   \item{D3_1r5}{I don't know}
+#'   \item{Hid_D3}{ HIDDEN for D3}
+#'   \item{D3_2}{ Private investors who pursue value-alignment as a non-financial goal aim to generate positive change in the real world.}
+#'   \item{D3_3}{ What do private investors who solely pursue impact investing want to achieve?}
+#'   \item{D3_4}{ Is there a difference between the non-financial goals of value alignment and impact investing?}
+#'   \item{E1}{ Here you can see the following description of an investment fund (please read)}
+#'   \item{E2}{ Here you can see another description of an investment fund (please read)}
+#'   \item{E3}{ Here you can see another description of an investment fund (please read)}
+#'   \item{F1}{ Please indicate your highest educational level.}
+#'   \item{F1r6oe}{ Please indicate your highest educational level. - Other professional qualification}
+#'   \item{F2}{ Please indicate the monthly net household income of all persons currently living permanently in your household}
+#'   \item{F3}{ Please indicate the amount of the money and securities assets of your household.}
+#'   \item{F4}{ Have you made any voluntary payments such as donations or contributions to charitable organizations or institutions in the past twelve months?}
+#' }
+"Survey_EUKI_2025"
